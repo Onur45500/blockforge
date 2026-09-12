@@ -1,6 +1,6 @@
 {
   "name": "@blockforge/desktop",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Blockforge desktop shell — Electron + React",
   "author": "Onur Akmesei",
@@ -30,7 +30,6 @@
     "@types/react-dom": "^19.0.2",
     "@types/three": "^0.186.0",
     "@vitejs/plugin-react": "^4.3.4",
-    "electron": "^33.3.1",
     "electron-builder": "^25.1.8",
     "electron-vite": "^2.3.0",
     "tsx": "^4.19.2",
