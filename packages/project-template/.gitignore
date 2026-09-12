@@ -1,0 +1,7 @@
+.blockforge/
+node_modules/
+out/
+include/
+*.rbxl
+*.rbxlx
+place.rbxl

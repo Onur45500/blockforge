@@ -1,0 +1,16 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "RebirthPad",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [8, 1, 8],
+        "Position": [28, 11.5, 0],
+        "Material": "Neon",
+        "Color": [0.7, 0.2, 0.85]
+      }
+    }
+  ]
+}

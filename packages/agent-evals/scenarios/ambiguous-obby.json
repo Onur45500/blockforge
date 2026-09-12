@@ -1,0 +1,15 @@
+{
+  "id": "ambiguous-obby",
+  "prompt": "can you make like an obstacle thing near where i spawn with something that kills me",
+  "maxTurns": 16,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["KillBrick"],
+    "srcRegex": [
+      { "pattern": "KillBrick|Touched", "pathGlob": "src/server/**/*.ts" }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "combat-raycast",
+  "prompt": "Add a RaycastRack that gives a tool. On Activated, the server raycasts from HRP look and damages. Never trust a client hit list.",
+  "maxTurns": 16,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["RaycastRack"],
+    "srcRegex": [
+      { "pattern": "RaycastRack", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "Raycast", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "Tool|Activated", "pathGlob": "src/server/**/*.ts" }
+    ]
+  }
+}

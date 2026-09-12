@@ -1,0 +1,17 @@
+{
+  "id": "fireball-cast",
+  "prompt": "Add an R-key fireball. Use a RemoteEvent named CastFireball. The server must spawn the projectile with a ParticleEmitter (not a lone Neon Ball) and apply damage on touch.",
+  "maxTurns": 16,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "remoteNames": ["CastFireball"],
+    "srcRegex": [
+      { "pattern": "CastFireball", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "ParticleEmitter", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "KeyCode\\.R|Enum\\.KeyCode\\.R", "pathGlob": "src/client/**/*.ts" }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "NpcMarker",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [2, 5, 2],
+        "Position": [20, 13.5, 10],
+        "Material": "SmoothPlastic",
+        "Color": [0.85, 0.45, 0.2]
+      }
+    }
+  ]
+}

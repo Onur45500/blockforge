@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "scripts",
+    "types": ["node"],
+    "noUnusedLocals": false
+  },
+  "include": ["scripts/**/*"],
+  "exclude": ["scripts/**/*.test.ts"]
+}

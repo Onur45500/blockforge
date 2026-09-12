@@ -1,0 +1,14 @@
+{
+  "id": "npc-loop",
+  "prompt": "Add a simple NPC that patrols back and forth near spawn.",
+  "maxTurns": 14,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "srcRegex": [
+      { "pattern": "while|Heartbeat|task\\.wait|PivotTo|MoveTo|Tween", "pathGlob": "src/server/**/*.ts" }
+    ]
+  }
+}

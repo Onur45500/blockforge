@@ -1,0 +1,11 @@
+{
+  "id": "lowpoly-nature",
+  "name": "Low-poly Nature",
+  "version": "1.0.0",
+  "description": "Style pack: simple low-poly trees, rocks, and grass for outdoor maps.",
+  "worldContract": {
+    "requiredNames": ["World", "SpawnPlatform", "DefaultSpawn"],
+    "suggestedProps": ["Tree", "Rock", "Grass"]
+  },
+  "agentPrompt": "Use the Low-poly Nature style pack. Prefer placeModelAsset / world .model.json over Part factories. Keep SpawnLocation Named DefaultSpawn on walkable ground. Scenery Names should be Tree/Rock/Grass variants under Workspace.World."
+}

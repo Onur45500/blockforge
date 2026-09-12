@@ -1,0 +1,30 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "GroundPlatform",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [40, 2, 40],
+        "Position": [0, 10, 0],
+        "Material": "SmoothPlastic",
+        "Color": [0.55, 0.55, 0.6]
+      }
+    },
+    {
+      "Name": "DefaultSpawn",
+      "ClassName": "SpawnLocation",
+      "Properties": {
+        "Anchored": true,
+        "Size": [6, 1, 6],
+        "Position": [0, 11.5, 0],
+        "Neutral": true,
+        "Enabled": true,
+        "Duration": 0,
+        "Material": "Neon",
+        "Color": [0.2, 0.9, 0.35]
+      }
+    }
+  ]
+}

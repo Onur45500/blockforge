@@ -1,0 +1,17 @@
+{
+  "id": "pet-follower",
+  "prompt": "Add a PetGrantPad and PetMarker. Touching the grant pad clones an anchored pet that follows the player on the server.",
+  "maxTurns": 16,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["PetGrantPad", "PetMarker"],
+    "srcRegex": [
+      { "pattern": "PetGrantPad", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "PetMarker", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "PivotTo|Heartbeat", "pathGlob": "src/server/**/*.ts" }
+    ]
+  }
+}

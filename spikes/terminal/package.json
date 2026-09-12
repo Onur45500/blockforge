@@ -1,0 +1,20 @@
+{
+  "name": "@blockforge/spike-terminal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "tsc -p tsconfig.json && electron .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build": "tsc -p tsconfig.json",
+    "lint": "tsc -p tsconfig.json --noEmit"
+  },
+  "main": "dist/main.js",
+  "dependencies": {
+    "node-pty": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "electron": "^33.3.1",
+    "typescript": "^5.7.3"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "obby-trap",
+  "prompt": "Add a fading floor named FadeTrap and a lava brick named LavaBrick near spawn. The floor should fade on the server then stop colliding, and touching lava should set Humanoid.Health to 0.",
+  "maxTurns": 16,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["FadeTrap", "LavaBrick"],
+    "srcRegex": [
+      { "pattern": "FadeTrap", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "LavaBrick", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "Health", "pathGlob": "src/server/**/*.ts" }
+    ]
+  }
+}

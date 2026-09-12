@@ -1,0 +1,16 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "ShopDoor",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [8, 12, 1],
+        "Position": [0, 17, 20],
+        "Material": "Wood",
+        "Color": [0.45, 0.28, 0.16]
+      }
+    }
+  ]
+}

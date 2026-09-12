@@ -1,0 +1,17 @@
+{
+  "id": "vehicle-kart",
+  "prompt": "Add a VehicleKart with DriveSeat. Sitting and holding W should move the kart via server PivotTo. Keep chassis parts Anchored.",
+  "maxTurns": 16,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["VehicleKart", "DriveSeat"],
+    "srcRegex": [
+      { "pattern": "VehicleKart", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "DriveSeat|VehicleSeat", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "PivotTo|Throttle", "pathGlob": "src/server/**/*.ts" }
+    ]
+  }
+}

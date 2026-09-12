@@ -1,0 +1,16 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "CoinPad",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [8, 1, 8],
+        "Position": [12, 11.5, 12],
+        "Material": "Neon",
+        "Color": [1, 0.85, 0.2]
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "PlanterBed",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [6, 1, 6],
+        "Position": [-16, 11.5, -12],
+        "Material": "Ground",
+        "Color": [0.4, 0.28, 0.16]
+      }
+    }
+  ]
+}

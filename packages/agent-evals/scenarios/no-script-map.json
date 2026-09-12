@@ -1,0 +1,19 @@
+{
+  "id": "no-script-map",
+  "prompt": "Add a walkable platform near spawn named NearSpawnPad. Put it in world JSON — do not create platforms with new Instance Part in a server script.",
+  "maxTurns": 12,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["NearSpawnPad"],
+    "srcRegex": [
+      {
+        "pattern": "new\\s+Instance\\s*\\(\\s*[\"']Part[\"']",
+        "pathGlob": "src/server/**/*.ts",
+        "mustNotMatch": true
+      }
+    ]
+  }
+}

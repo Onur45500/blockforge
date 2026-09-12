@@ -1,0 +1,16 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "WeaponRack",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [6, 1, 6],
+        "Position": [-12, 11.5, 12],
+        "Material": "Metal",
+        "Color": [0.55, 0.55, 0.6]
+      }
+    }
+  ]
+}

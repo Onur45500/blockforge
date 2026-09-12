@@ -1,0 +1,18 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "ZoneVolume",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [12, 8, 12],
+        "Position": [14, 15, 16],
+        "Material": "Glass",
+        "Color": [0.25, 0.85, 0.55],
+        "Transparency": 0.65,
+        "CanCollide": false
+      }
+    }
+  ]
+}

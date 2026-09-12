@@ -1,0 +1,81 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "VehicleKart",
+      "ClassName": "Model",
+      "Children": [
+        {
+          "Name": "DriveSeat",
+          "ClassName": "VehicleSeat",
+          "Properties": {
+            "Anchored": true,
+            "Size": [4, 1, 4],
+            "Position": [8, 12, 36],
+            "Material": "Metal",
+            "Color": [0.25, 0.25, 0.3]
+          }
+        },
+        {
+          "Name": "Chassis",
+          "ClassName": "Part",
+          "Properties": {
+            "Anchored": true,
+            "Size": [6, 1, 10],
+            "Position": [8, 11.5, 36],
+            "Material": "SmoothPlastic",
+            "Color": [0.2, 0.55, 0.35]
+          }
+        },
+        {
+          "Name": "WheelFL",
+          "ClassName": "Part",
+          "Properties": {
+            "Anchored": true,
+            "Size": [1.5, 1.5, 1.5],
+            "Position": [5.5, 11.5, 32.5],
+            "Shape": "Ball",
+            "Material": "Slate",
+            "Color": [0.12, 0.12, 0.12]
+          }
+        },
+        {
+          "Name": "WheelFR",
+          "ClassName": "Part",
+          "Properties": {
+            "Anchored": true,
+            "Size": [1.5, 1.5, 1.5],
+            "Position": [10.5, 11.5, 32.5],
+            "Shape": "Ball",
+            "Material": "Slate",
+            "Color": [0.12, 0.12, 0.12]
+          }
+        },
+        {
+          "Name": "WheelBL",
+          "ClassName": "Part",
+          "Properties": {
+            "Anchored": true,
+            "Size": [1.5, 1.5, 1.5],
+            "Position": [5.5, 11.5, 39.5],
+            "Shape": "Ball",
+            "Material": "Slate",
+            "Color": [0.12, 0.12, 0.12]
+          }
+        },
+        {
+          "Name": "WheelBR",
+          "ClassName": "Part",
+          "Properties": {
+            "Anchored": true,
+            "Size": [1.5, 1.5, 1.5],
+            "Position": [10.5, 11.5, 39.5],
+            "Shape": "Ball",
+            "Material": "Slate",
+            "Color": [0.12, 0.12, 0.12]
+          }
+        }
+      ]
+    }
+  ]
+}

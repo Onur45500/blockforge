@@ -1,0 +1,16 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "GamePassPad",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [6, 1, 6],
+        "Position": [24, 11.5, -12],
+        "Material": "Neon",
+        "Color": [0.95, 0.75, 0.15]
+      }
+    }
+  ]
+}

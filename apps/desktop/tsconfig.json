@@ -1,0 +1,25 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "noEmit": true,
+    "declaration": false,
+    "declarationMap": false,
+    "baseUrl": ".",
+    "paths": {
+      "@shared/*": ["src/shared/*"]
+    },
+    "types": ["vite/client"]
+  },
+  "include": [
+    "src/env.d.ts",
+    "src/renderer/**/*",
+    "src/shared/ipc-types.ts",
+    "src/shared/ipc-channels.ts",
+    "src/shared/slugify.ts"
+  ],
+  "exclude": ["src/**/*.test.ts"]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "zone-volume",
+  "prompt": "Add a CanCollide-false volume named ZoneVolume. On the server, detect when I enter or leave it with GetPartsInPart (not Touched) and boost WalkSpeed while I am inside.",
+  "maxTurns": 16,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["ZoneVolume"],
+    "srcRegex": [
+      { "pattern": "ZoneVolume", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "GetPartsInPart", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "WalkSpeed", "pathGlob": "src/server/**/*.ts" }
+    ]
+  }
+}

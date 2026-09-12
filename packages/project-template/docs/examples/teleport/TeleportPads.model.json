@@ -1,0 +1,27 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "TeleportPadA",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [8, 1, 8],
+        "Position": [16, 11.5, 0],
+        "Material": "Neon",
+        "Color": [0.2, 0.55, 1]
+      }
+    },
+    {
+      "Name": "TeleportPadB",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [8, 1, 8],
+        "Position": [16, 11.5, 24],
+        "Material": "Neon",
+        "Color": [1, 0.45, 0.2]
+      }
+    }
+  ]
+}

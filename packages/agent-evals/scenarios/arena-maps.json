@@ -1,0 +1,18 @@
+{
+  "id": "arena-maps",
+  "prompt": "Add two arena maps with pads named MapA_Red, MapA_Blue, MapB_Red, and MapB_Blue. Each round pick a map, teleport Red and Blue teams, show a round timer HUD from ArenaStatus, and award Points. Do not add extra SpawnLocations.",
+  "maxTurns": 16,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["MapA_Red", "MapA_Blue", "MapB_Red", "MapB_Blue"],
+    "srcRegex": [
+      { "pattern": "MapA_Red", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "MapB_Blue", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "ArenaStatus", "pathGlob": "src/**/*.ts" },
+      { "pattern": "Points", "pathGlob": "src/server/**/*.ts" }
+    ]
+  }
+}

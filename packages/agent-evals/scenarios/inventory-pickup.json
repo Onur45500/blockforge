@@ -1,0 +1,18 @@
+{
+  "id": "inventory-pickup",
+  "prompt": "Add a LootPad that gives me a Potion in my inventory when I touch it, and a HUD that shows how many potions I have. The server must own the inventory.",
+  "maxTurns": 16,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["LootPad"],
+    "srcRegex": [
+      { "pattern": "Inventory", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "Potion", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "LootPad", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "ScreenGui|Potion", "pathGlob": "src/client/**/*.ts" }
+    ]
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "LobbyFloor",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [48, 2, 48],
+        "Position": [0, 10, 0],
+        "Material": "SmoothPlastic",
+        "Color": [0.35, 0.38, 0.45]
+      }
+    },
+    {
+      "Name": "DefaultSpawn",
+      "ClassName": "SpawnLocation",
+      "Properties": {
+        "Anchored": true,
+        "Size": [8, 1, 8],
+        "Position": [0, 11.5, 0],
+        "Neutral": true,
+        "Enabled": true,
+        "Duration": 0,
+        "Material": "Neon",
+        "Color": [0.2, 0.9, 0.35]
+      }
+    },
+    {
+      "Name": "WallNorth",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [48, 12, 2],
+        "Position": [0, 17, -25],
+        "Material": "Concrete",
+        "Color": [0.45, 0.48, 0.55]
+      }
+    },
+    {
+      "Name": "WallSouthLeft",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [18, 12, 2],
+        "Position": [-15, 17, 25],
+        "Material": "Concrete",
+        "Color": [0.45, 0.48, 0.55]
+      }
+    },
+    {
+      "Name": "WallSouthRight",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [18, 12, 2],
+        "Position": [15, 17, 25],
+        "Material": "Concrete",
+        "Color": [0.45, 0.48, 0.55]
+      }
+    },
+    {
+      "Name": "WallEast",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [2, 12, 48],
+        "Position": [25, 17, 0],
+        "Material": "Concrete",
+        "Color": [0.45, 0.48, 0.55]
+      }
+    },
+    {
+      "Name": "WallWest",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [2, 12, 48],
+        "Position": [-25, 17, 0],
+        "Material": "Concrete",
+        "Color": [0.45, 0.48, 0.55]
+      }
+    },
+    {
+      "Name": "AccentPillarLeft",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [3, 10, 3],
+        "Position": [-12, 16, -12],
+        "Material": "Neon",
+        "Color": [0.15, 0.55, 1]
+      }
+    },
+    {
+      "Name": "AccentPillarRight",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [3, 10, 3],
+        "Position": [12, 16, -12],
+        "Material": "Neon",
+        "Color": [0.15, 0.55, 1]
+      }
+    }
+  ]
+}

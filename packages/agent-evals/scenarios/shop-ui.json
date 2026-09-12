@@ -1,0 +1,18 @@
+{
+  "id": "shop-ui",
+  "prompt": "Add a simple shop UI that lets me spend coins to buy an item. Use a RemoteEvent named BuyItem and validate purchases on the server.",
+  "maxTurns": 18,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "remoteNames": ["BuyItem"],
+    "srcRegex": [
+      { "pattern": "RemoteEvent", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "OnServerEvent|onServerEvent", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "ScreenGui|TextButton|BuyItem", "pathGlob": "src/client/**/*.ts" }
+    ]
+  },
+  "runtimeProbe": "probes/shop.luau"
+}

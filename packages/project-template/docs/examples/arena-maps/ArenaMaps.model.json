@@ -1,0 +1,71 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "MapA_Floor",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [32, 1, 16],
+        "Position": [0, 11, 40],
+        "Material": "SmoothPlastic",
+        "Color": [0.32, 0.34, 0.4]
+      }
+    },
+    {
+      "Name": "MapA_Red",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [8, 1, 8],
+        "Position": [-10, 11.5, 40],
+        "Material": "Neon",
+        "Color": [0.9, 0.2, 0.2]
+      }
+    },
+    {
+      "Name": "MapA_Blue",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [8, 1, 8],
+        "Position": [10, 11.5, 40],
+        "Material": "Neon",
+        "Color": [0.2, 0.4, 0.95]
+      }
+    },
+    {
+      "Name": "MapB_Floor",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [16, 1, 32],
+        "Position": [-40, 11, 0],
+        "Material": "SmoothPlastic",
+        "Color": [0.28, 0.36, 0.32]
+      }
+    },
+    {
+      "Name": "MapB_Red",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [8, 1, 8],
+        "Position": [-40, 11.5, -8],
+        "Material": "Neon",
+        "Color": [0.9, 0.2, 0.2]
+      }
+    },
+    {
+      "Name": "MapB_Blue",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [8, 1, 8],
+        "Position": [-40, 11.5, 8],
+        "Material": "Neon",
+        "Color": [0.2, 0.4, 0.95]
+      }
+    }
+  ]
+}

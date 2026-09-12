@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "blockforge": {
+      "command": "node",
+      "args": ["scripts/blockforge-mcp-launcher.mjs"],
+      "env": {
+        "BLOCKFORGE_MCP_URL": "http://127.0.0.1:34874"
+      }
+    }
+  }
+}

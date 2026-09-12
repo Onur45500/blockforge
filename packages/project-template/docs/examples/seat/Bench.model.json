@@ -1,0 +1,16 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "BenchSeat",
+      "ClassName": "Seat",
+      "Properties": {
+        "Anchored": true,
+        "Size": [4, 1, 2],
+        "Position": [0, 11.5, -16],
+        "Material": "Wood",
+        "Color": [0.42, 0.3, 0.18]
+      }
+    }
+  ]
+}

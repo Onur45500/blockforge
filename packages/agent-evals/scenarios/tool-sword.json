@@ -1,0 +1,15 @@
+{
+  "id": "tool-sword",
+  "prompt": "Give the player a sword from a weapon rack they can touch.",
+  "maxTurns": 14,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["WeaponRack"],
+    "srcRegex": [
+      { "pattern": "Tool", "pathGlob": "src/server/**/*.ts" }
+    ]
+  }
+}

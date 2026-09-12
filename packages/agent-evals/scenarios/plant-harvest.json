@@ -1,0 +1,17 @@
+{
+  "id": "plant-harvest",
+  "prompt": "Add a planter bed named PlanterBed with a ProximityPrompt. Planting should grow a crop on the server, then harvesting grants Coins. I already want leaderstats Coins if missing.",
+  "maxTurns": 16,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["PlanterBed"],
+    "srcRegex": [
+      { "pattern": "PlanterBed", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "ProximityPrompt", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "Coins", "pathGlob": "src/server/**/*.ts" }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "teams-round",
+  "prompt": "Add two team pads named TeamPadRed and TeamPadBlue, assign players to Red and Blue teams, and run a timed round that awards Points.",
+  "maxTurns": 16,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["TeamPadRed", "TeamPadBlue"],
+    "srcRegex": [
+      { "pattern": "TeamPadRed", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "TeamPadBlue", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "Points", "pathGlob": "src/server/**/*.ts" }
+    ]
+  }
+}

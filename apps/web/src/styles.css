@@ -1,0 +1,169 @@
+:root {
+  --bg0: #0c1210;
+  --bg1: #14201a;
+  --ink: #e8f0ea;
+  --muted: #9bb0a3;
+  --accent: #3dcf8e;
+  --accent-ink: #04140c;
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "Sora", "Segoe UI", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Sora:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: var(--font-body);
+  background: radial-gradient(1200px 600px at 10% -10%, #1d3b2d, transparent),
+    radial-gradient(900px 500px at 90% 0%, #243528, transparent), var(--bg0);
+}
+
+.atmosphere {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(circle at 50% 20%, black, transparent 70%);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 6vw;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+nav a {
+  color: var(--muted);
+  margin-left: 1.25rem;
+  text-decoration: none;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  padding: 12vh 6vw 8vh;
+  max-width: 52rem;
+}
+
+.brand-mark {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 8vw, 5.5rem);
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  background: linear-gradient(120deg, #dff7e8, var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rise 0.9s ease both;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3.2vw, 2rem);
+  font-weight: 600;
+  margin: 0 0 1rem;
+  animation: rise 1s ease 0.08s both;
+}
+
+.lede {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 36rem;
+  animation: rise 1.05s ease 0.14s both;
+}
+
+.cta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+  animation: rise 1.1s ease 0.2s both;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.15rem;
+  border-radius: 0.55rem;
+  background: var(--accent);
+  color: var(--accent-ink);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid rgba(232, 240, 234, 0.25);
+}
+
+.panel {
+  position: relative;
+  z-index: 1;
+  margin: 0 6vw 4rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(232, 240, 234, 0.08);
+  max-width: 40rem;
+}
+
+.panel h2 {
+  font-family: var(--font-display);
+  margin-top: 0;
+}
+
+.panel p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 6vw 3rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  nav a {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+}

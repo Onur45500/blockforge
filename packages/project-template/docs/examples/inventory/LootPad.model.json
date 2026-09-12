@@ -1,0 +1,16 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "LootPad",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [6, 1, 6],
+        "Position": [-20, 11.5, -8],
+        "Material": "Neon",
+        "Color": [0.55, 0.35, 0.95]
+      }
+    }
+  ]
+}

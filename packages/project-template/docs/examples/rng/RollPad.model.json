@@ -1,0 +1,16 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "RollPad",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [8, 1, 8],
+        "Position": [24, 11.5, -12],
+        "Material": "Neon",
+        "Color": [0.95, 0.35, 0.75]
+      }
+    }
+  ]
+}

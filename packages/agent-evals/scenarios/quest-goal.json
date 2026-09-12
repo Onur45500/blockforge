@@ -1,0 +1,17 @@
+{
+  "id": "quest-goal",
+  "prompt": "Add a quest with QuestNpc and QuestGoal. ProximityPrompt on the NPC, then touch the goal pad for a one-time coin grant on the server.",
+  "maxTurns": 16,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["QuestNpc", "QuestGoal"],
+    "srcRegex": [
+      { "pattern": "QuestNpc", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "QuestGoal", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "ProximityPrompt", "pathGlob": "src/server/**/*.ts" }
+    ]
+  }
+}

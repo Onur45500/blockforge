@@ -1,0 +1,38 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "TrapApproach",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [8, 1, 8],
+        "Position": [0, 11.5, -24],
+        "Material": "SmoothPlastic",
+        "Color": [0.45, 0.48, 0.52]
+      }
+    },
+    {
+      "Name": "FadeTrap",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [8, 1, 8],
+        "Position": [0, 11.5, -34],
+        "Material": "Glass",
+        "Color": [0.7, 0.85, 1]
+      }
+    },
+    {
+      "Name": "LavaBrick",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [14, 1, 14],
+        "Position": [0, 8.5, -34],
+        "Material": "Neon",
+        "Color": [0.95, 0.25, 0.08]
+      }
+    }
+  ]
+}

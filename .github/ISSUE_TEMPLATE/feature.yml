@@ -1,0 +1,21 @@
+name: Feature request
+description: Propose an improvement to Blockforge
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is hard or missing today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should Blockforge do instead?
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: Check [docs/ROADMAP.md](../../docs/ROADMAP.md) before duplicating a planned item. Non-goals include reselling AI access and shipping scraped proprietary assets.

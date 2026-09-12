@@ -1,0 +1,143 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+concurrency:
+  group: release-main
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  version:
+    if: |
+      github.ref == 'refs/heads/main' &&
+      !startsWith(github.event.head_commit.message, 'chore(release)') &&
+      !contains(github.event.head_commit.message, '[skip release]')
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Enable corepack pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@9.15.0 --activate
+
+      - name: Verify version bump script
+        run: node --test scripts/ci-prepare-release.test.mjs
+
+      - name: Compute next version
+        id: version
+        run: |
+          VERSION="$(node scripts/ci-prepare-release.mjs)"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "Next version: ${VERSION}"
+
+      - name: Commit version and tag
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package.json apps/desktop/package.json
+          if git diff --cached --quiet; then
+            echo "package.json already at v${{ steps.version.outputs.version }}"
+          else
+            git commit -m "chore(release): v${{ steps.version.outputs.version }}"
+          fi
+          git tag "v${{ steps.version.outputs.version }}"
+          git push origin HEAD:main
+          git push origin "v${{ steps.version.outputs.version }}"
+
+  windows:
+    needs: version
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: v${{ needs.version.outputs.version }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Enable corepack pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@9.15.0 --activate
+
+      - name: Install
+        run: pnpm install
+
+      - name: Build open-cloud
+        run: pnpm --filter @blockforge/open-cloud build
+
+      - name: Ingest + pack assets
+        run: |
+          pnpm --filter @blockforge/asset-bank ingest
+          pnpm --filter @blockforge/asset-bank build-pack
+
+      - name: Typecheck + unit tests
+        run: |
+          pnpm --filter @blockforge/desktop typecheck
+          pnpm --filter @blockforge/desktop test
+
+      - name: Build and publish Windows installer
+        env:
+          CSC_LINK: ${{ secrets.CSC_LINK }}
+          CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: pnpm --filter @blockforge/desktop release:win
+
+      - name: Attach asset pack to the GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ needs.version.outputs.version }}
+          files: |
+            packages/asset-bank/pack/blockforge-assets-*.tar.gz
+            packages/asset-bank/pack/manifest.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  macos:
+    needs: version
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: v${{ needs.version.outputs.version }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Enable corepack pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@9.15.0 --activate
+
+      - name: Install
+        run: pnpm install
+
+      - name: Build open-cloud
+        run: pnpm --filter @blockforge/open-cloud build
+
+      - name: Ingest asset catalog
+        run: pnpm --filter @blockforge/asset-bank ingest
+
+      - name: Build and publish macOS DMG + zip
+        env:
+          # Unsigned until Apple cert secrets exist. Gatekeeper: right-click → Open.
+          CSC_IDENTITY_AUTO_DISCOVERY: "false"
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: pnpm --filter @blockforge/desktop release:mac

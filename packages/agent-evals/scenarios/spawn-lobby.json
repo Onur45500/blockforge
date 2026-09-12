@@ -1,0 +1,13 @@
+{
+  "id": "spawn-lobby",
+  "prompt": "Make a spawn platform lobby where my player will spawn, with low walls and a doorway.",
+  "maxTurns": 12,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["DefaultSpawn"],
+    "filesExist": ["world/SpawnPlatform.model.json"]
+  }
+}

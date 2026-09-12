@@ -1,0 +1,99 @@
+; FBX 7.4.0 project file
+FBXHeaderExtension:  {
+	FBXHeaderVersion: 1003
+	FBXVersion: 7400
+	Creator: "Blockforge fixture"
+}
+GlobalSettings:  {
+	Version: 1000
+}
+Documents:  {
+	Count: 1
+	Document: 1234567890, "", "Scene" {
+		Properties70:  {
+			P: "RootNode", "object", "", "",0
+		}
+		RootNode: 0
+	}
+}
+References:  {
+}
+Definitions:  {
+	Version: 100
+	Count: 3
+	ObjectType: "Geometry" {
+		Count: 1
+	}
+	ObjectType: "Model" {
+		Count: 1
+	}
+	ObjectType: "Material" {
+		Count: 1
+	}
+}
+Objects:  {
+	Geometry: 1000000001, "Geometry::Cube", "Mesh" {
+		Vertices: *24 {
+			a: -50,-50,50,50,-50,50,50,50,50,-50,50,50,-50,-50,-50,-50,50,-50,50,50,-50,50,-50,-50
+		} 
+		PolygonVertexIndex: *24 {
+			a: 0,1,2,-4,4,5,6,-8,0,3,5,-5,1,7,6,-4,3,2,6,-6,4,7,1,-5
+		} 
+		GeometryVersion: 124
+		LayerElementNormal: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			Normals: *72 {
+				a: 0,0,1,0,0,1,0,0,1,0,0,1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,-1,0,0,-1,0,0,-1,0,0,-1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,0,1,0,0,1,0,0,1,0,0,1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0
+			} 
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: *1 {
+				a: 0
+			} 
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+		}
+	}
+	Model: 1000000002, "Model::Cube", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Material: 1000000003, "Material::Default", "" {
+		Version: 102
+		ShadingModel: "phong"
+		MultiLayer: 0
+		Properties70:  {
+			P: "DiffuseColor", "Color", "", "A",0.35,0.65,0.95
+			P: "Diffuse", "Vector3D", "Vector", "",0.35,0.65,0.95
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+}
+Connections:  {
+	C: "OO",1000000002,0
+	C: "OO",1000000001,1000000002
+	C: "OO",1000000003,1000000002
+}

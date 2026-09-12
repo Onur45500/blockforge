@@ -1,0 +1,33 @@
+{
+  "name": "blockforge-game",
+  "version": "0.1.0",
+  "private": true,
+  "description": "roblox-ts game template used by Blockforge for new projects",
+  "scripts": {
+    "build": "rbxtsc && node ./scripts/copy-include.mjs",
+    "watch": "rbxtsc -w",
+    "typecheck": "rbxtsc",
+    "lint": "rbxtsc",
+    "validate:world": "node ./scripts/validate-world.mjs",
+    "validate:refs": "node ./scripts/validate-refs.mjs",
+    "copy-include": "node ./scripts/copy-include.mjs",
+    "map-toolkit": "node ./scripts/install-map-toolkit.mjs",
+    "lookup-asset": "node ./scripts/lookup-asset.mjs",
+    "notes": "node ./scripts/notes.mjs",
+    "clean-restart": "node ./scripts/clean-restart.mjs",
+    "audit-scenery": "node ./scripts/audit-scenery.mjs",
+    "skills": "node ./scripts/list-skills.mjs"
+  },
+  "devDependencies": {
+    "@rbxts/compiler-types": "3.0.0-types.0",
+    "@rbxts/types": "^1.0.813",
+    "roblox-ts": "^3.0.0",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@rbxts/services": "^1.5.4"
+  },
+  "blockforge": {
+    "templateVersion": "0.7.0"
+  }
+}

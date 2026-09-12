@@ -1,0 +1,15 @@
+{
+  "id": "admin-commands",
+  "prompt": "Add minimal admin chat commands :speed and :tp for my user id 1.",
+  "maxTurns": 12,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "filesExist": ["src/shared/admin-config.ts", "src/server/admin.server.ts"],
+    "srcRegex": [
+      { "pattern": ":speed|:tp|ADMIN_USER_IDS", "pathGlob": "src/**/*.ts" }
+    ]
+  }
+}

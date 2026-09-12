@@ -1,0 +1,16 @@
+{
+  "id": "tycoon-collect",
+  "prompt": "Add a one-plot tycoon with a Dropper that spawns collectible drops and a TycoonCollector. Touching a drop should give coins.",
+  "maxTurns": 16,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["Dropper", "TycoonCollector"],
+    "srcRegex": [
+      { "pattern": "Dropper", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "TycoonDrop|TycoonCollector", "pathGlob": "src/server/**/*.ts" }
+    ]
+  }
+}

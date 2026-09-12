@@ -1,0 +1,18 @@
+{
+  "id": "obby-killbrick",
+  "prompt": "Add a short obby course near spawn with a green checkpoint and a red kill brick that respawns me at the checkpoint.",
+  "maxTurns": 16,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["Checkpoint1", "KillBrick"],
+    "filesExist": ["src/server/obby-logic.server.ts"],
+    "srcRegex": [
+      { "pattern": "KillBrick", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "Checkpoint1", "pathGlob": "src/server/**/*.ts" }
+    ]
+  },
+  "runtimeProbe": "probes/obby.luau"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "rng-roll",
+  "prompt": "Add a RollPad that does a weighted RNG roll on the server. Use a RemoteEvent named Roll (ensureRemoteEvent). The client must not send rarity.",
+  "maxTurns": 16,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["RollPad"],
+    "srcRegex": [
+      { "pattern": "RollPad", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "ensureRemoteEvent\\([\"']Roll[\"']\\)|[\"']Roll[\"']", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "Common|Uncommon|Rare", "pathGlob": "src/server/**/*.ts" }
+    ]
+  }
+}

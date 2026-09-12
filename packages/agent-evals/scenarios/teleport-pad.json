@@ -1,0 +1,19 @@
+{
+  "id": "teleport-pad",
+  "prompt": "Add two teleport pads named TeleportPadA and TeleportPadB — step on pad A and go to pad B.",
+  "maxTurns": 14,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["TeleportPadA", "TeleportPadB"],
+    "srcRegex": [
+      { "pattern": "\\.Touched", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "HumanoidRootPart", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "TeleportPadA", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "TeleportPadB", "pathGlob": "src/server/**/*.ts" }
+    ]
+  },
+  "runtimeProbe": "probes/teleport.luau"
+}

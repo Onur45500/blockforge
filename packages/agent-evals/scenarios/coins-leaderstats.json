@@ -1,0 +1,19 @@
+{
+  "id": "coins-leaderstats",
+  "prompt": "Add a coin pad that gives me coins on the leaderboard when I touch it.",
+  "maxTurns": 14,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["CoinPad"],
+    "srcRegex": [
+      { "pattern": "leaderstats", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "Coins", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "CoinPad", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "\\.Touched", "pathGlob": "src/server/**/*.ts" }
+    ]
+  },
+  "runtimeProbe": "probes/coins.luau"
+}

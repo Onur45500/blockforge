@@ -1,0 +1,18 @@
+{
+  "id": "gamepass-speed",
+  "prompt": "Add a GamePassPad that prompts a Game Pass purchase. Use a RemoteEvent named PromptSpeedPass. Client only prompts; server checks ownership and sets WalkSpeed. Leave GAME_PASS_ID as 0 if no live id.",
+  "maxTurns": 16,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["GamePassPad"],
+    "remoteNames": ["PromptSpeedPass"],
+    "srcRegex": [
+      { "pattern": "GamePassPad", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "PromptSpeedPass|UserOwnsGamePassAsync|PromptGamePassPurchase", "pathGlob": "src/**/*.ts" },
+      { "pattern": "GAME_PASS_ID", "pathGlob": "src/**/*.ts" }
+    ]
+  }
+}

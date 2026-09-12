@@ -1,0 +1,17 @@
+{
+  "id": "collect-click",
+  "prompt": "Add a CollectPad that gives me 1 coin when I click it with a ClickDetector. Coins must increase on the server.",
+  "maxTurns": 14,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["CollectPad"],
+    "srcRegex": [
+      { "pattern": "CollectPad", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "ClickDetector", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "Coins", "pathGlob": "src/server/**/*.ts" }
+    ]
+  }
+}

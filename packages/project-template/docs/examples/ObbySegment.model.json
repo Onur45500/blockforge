@@ -1,0 +1,60 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "ObbyStart",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [10, 1, 10],
+        "Position": [30, 12, 0],
+        "Material": "SmoothPlastic",
+        "Color": [0.3, 0.7, 0.4]
+      }
+    },
+    {
+      "Name": "Checkpoint1",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [8, 1, 8],
+        "Position": [42, 14, 0],
+        "Material": "Neon",
+        "Color": [0.2, 0.85, 0.4]
+      }
+    },
+    {
+      "Name": "ObbyStep3",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [8, 1, 8],
+        "Position": [54, 16, 4],
+        "Material": "SmoothPlastic",
+        "Color": [0.9, 0.45, 0.2]
+      }
+    },
+    {
+      "Name": "KillBrick",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [8, 1, 8],
+        "Position": [66, 18, 0],
+        "Material": "Neon",
+        "Color": [0.95, 0.15, 0.15]
+      }
+    },
+    {
+      "Name": "ObbyGoal",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [12, 1, 12],
+        "Position": [80, 20, 0],
+        "Material": "Neon",
+        "Color": [0.2, 0.9, 0.55]
+      }
+    }
+  ]
+}

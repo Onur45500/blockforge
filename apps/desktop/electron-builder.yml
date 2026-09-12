@@ -1,0 +1,57 @@
+appId: com.blockforge.desktop
+productName: Blockforge
+directories:
+  buildResources: build
+  output: release
+files:
+  - out/**/*
+  - package.json
+extraResources:
+  - from: ../../packages/project-template
+    to: project-template
+    filter:
+      - "**/*"
+      - "!node_modules/**"
+  - from: ../../packages/asset-bank/catalog
+    to: asset-bank/catalog
+    filter:
+      - "**/*"
+  - from: ../../packages/asset-bank/style-packs
+    to: asset-bank/style-packs
+    filter:
+      - "**/*"
+  - from: resources/studio-plugin
+    to: studio-plugin
+    filter:
+      - "**/*"
+publish:
+  - provider: github
+    owner: Onur45500
+    repo: blockforge
+    releaseType: release
+win:
+  target:
+    - nsis
+  artifactName: Blockforge-${version}-win.${ext}
+  # Set CSC_LINK / CSC_KEY_PASSWORD in CI for Authenticode signing.
+  signingHashAlgorithms:
+    - sha256
+mac:
+  target:
+    - target: dmg
+      arch:
+        - x64
+        - arm64
+    - target: zip
+      arch:
+        - x64
+        - arm64
+  category: public.app-category.developer-tools
+  artifactName: Blockforge-${version}-mac-${arch}.${ext}
+  # Notarization: set APPLE_ID, APPLE_APP_SPECIFIC_PASSWORD, APPLE_TEAM_ID in CI.
+  # Unsigned CI sets CSC_IDENTITY_AUTO_DISCOVERY=false (Gatekeeper still warns).
+  hardenedRuntime: true
+  gatekeeperAssess: false
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true

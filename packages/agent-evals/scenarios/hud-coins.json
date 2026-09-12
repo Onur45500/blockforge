@@ -1,0 +1,15 @@
+{
+  "id": "hud-coins",
+  "prompt": "Add a coins HUD that shows my leaderstats Coins in the top-left of the screen.",
+  "maxTurns": 14,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "srcRegex": [
+      { "pattern": "ScreenGui", "pathGlob": "src/client/**/*.ts" },
+      { "pattern": "leaderstats|Coins", "pathGlob": "src/client/**/*.ts" }
+    ]
+  }
+}

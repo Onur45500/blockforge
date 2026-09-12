@@ -1,0 +1,35 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "VfxPad",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [6, 1, 6],
+        "Position": [12, 11.5, -12],
+        "Material": "Neon",
+        "Color": [0.6, 0.35, 1]
+      },
+      "Children": [
+        {
+          "Name": "Burst",
+          "ClassName": "Attachment",
+          "Properties": {
+            "Position": [0, 1, 0]
+          },
+          "Children": [
+            {
+              "Name": "Sparks",
+              "ClassName": "ParticleEmitter",
+              "Properties": {
+                "Enabled": false,
+                "Rate": 0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

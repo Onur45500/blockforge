@@ -1,0 +1,20 @@
+{
+  "name": "@blockforge/asset-bank",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch-reference-bank": "tsx scripts/fetch-reference-bank.ts",
+    "ingest": "tsx scripts/ingest.ts",
+    "build-pack": "tsx scripts/build-pack.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build": "tsc -p tsconfig.json",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "test": "node --import tsx --test \"scripts/**/*.test.ts\""
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

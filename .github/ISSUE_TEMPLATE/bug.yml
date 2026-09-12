@@ -1,0 +1,52 @@
+name: Bug report
+description: Something in Blockforge does not work as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Redact API keys, tokens, and unpublished credentials. Never paste `.env` files.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did you expect, and what did you see instead?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Desktop workspace / terminals
+        - Swarm / agent adapters
+        - Studio / Rojo / MCP
+        - Asset bank
+        - Publish / Open Cloud
+        - Git / backups
+        - Doctor / Settings
+        - Project template / evals
+        - Docs / other
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      placeholder: Windows 11 x64
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs (optional)
+      description: Doctor output, terminal errors, or relevant snippets. Redact secrets.

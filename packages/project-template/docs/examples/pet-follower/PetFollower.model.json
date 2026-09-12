@@ -1,0 +1,27 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "PetGrantPad",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [6, 1, 6],
+        "Position": [-20, 11.5, 8],
+        "Material": "Neon",
+        "Color": [1, 0.55, 0.75]
+      }
+    },
+    {
+      "Name": "PetMarker",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [2, 2, 2],
+        "Position": [-20, 13, 8],
+        "Material": "SmoothPlastic",
+        "Color": [1, 0.7, 0.4]
+      }
+    }
+  ]
+}

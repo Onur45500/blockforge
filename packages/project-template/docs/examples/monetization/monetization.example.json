@@ -1,0 +1,17 @@
+{
+  "developerProducts": [
+    {
+      "name": "100 Coins",
+      "id": "replace-with-open-cloud-id",
+      "robux": 25,
+      "grant": { "coins": 100 }
+    }
+  ],
+  "gamePasses": [
+    {
+      "name": "VIP",
+      "id": "replace-with-open-cloud-id",
+      "robux": 99
+    }
+  ]
+}

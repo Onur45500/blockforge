@@ -1,0 +1,32 @@
+{
+  "name": "blockforge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Open-source desktop app for building Roblox games with AI agents (roblox-ts + Rojo + Open Cloud)",
+  "license": "MIT",
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "pnpm --filter @blockforge/desktop dev",
+    "build": "pnpm -r --filter=./packages/* --filter=./apps/* build",
+    "typecheck": "pnpm -r --filter=./packages/* --filter=./apps/* typecheck",
+    "test": "pnpm -r --filter=./packages/* --filter=./apps/* test",
+    "lint": "pnpm -r --filter=./packages/* --filter=./apps/* lint",
+    "spike:pipeline": "pnpm --filter @blockforge/spike-pipeline start",
+    "spike:terminal": "pnpm --filter @blockforge/spike-terminal start",
+    "template:build": "pnpm --filter blockforge-game build",
+    "evals:run": "pnpm --filter @blockforge/agent-evals start",
+    "evals:dry": "pnpm --filter @blockforge/agent-evals start -- --dry-run",
+    "evals:runtime": "pnpm --filter @blockforge/agent-evals start -- --runtime",
+    "assets:ingest": "pnpm --filter @blockforge/asset-bank ingest",
+    "assets:pack": "pnpm --filter @blockforge/asset-bank build-pack",
+    "assets:reference-bank": "pnpm --filter @blockforge/asset-bank fetch-reference-bank",
+    "web:dev": "pnpm --filter @blockforge/web dev"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "pnpm": "9.15.0",
+    "typescript": "^5.7.3"
+  }
+}

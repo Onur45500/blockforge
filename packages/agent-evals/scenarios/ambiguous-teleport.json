@@ -1,0 +1,14 @@
+{
+  "id": "ambiguous-teleport",
+  "prompt": "i want pads that warp me around",
+  "maxTurns": 14,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "srcRegex": [
+      { "pattern": "HumanoidRootPart|CFrame", "pathGlob": "src/server/**/*.ts" }
+    ]
+  }
+}

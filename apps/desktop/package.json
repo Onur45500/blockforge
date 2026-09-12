@@ -1,0 +1,49 @@
+{
+  "name": "@blockforge/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Blockforge desktop shell — Electron + React",
+  "main": "./out/main/index.js",
+  "type": "module",
+  "dependencies": {
+    "@blockforge/open-cloud": "workspace:*",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/ibm-plex-sans": "^5.3.0",
+    "@xterm/addon-fit": "^0.10.0",
+    "electron": "^33.3.1",
+    "electron-updater": "^6.3.9",
+    "extract-zip": "^2.0.1",
+    "jimp": "^1.6.1",
+    "node-pty": "^1.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-resizable-panels": "^4.12.4",
+    "simple-git": "^3.36.0",
+    "three": "^0.186.0",
+    "xterm": "^5.3.0",
+    "zod": "^4.6.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@types/three": "^0.186.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^2.3.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.6"
+  },
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build && electron-builder --config electron-builder.yml --publish never",
+    "release:win": "electron-vite build && electron-builder --config electron-builder.yml --win --publish always",
+    "release:mac": "electron-vite build && electron-builder --config electron-builder.yml --mac --publish always",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.node.json --noEmit",
+    "lint": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.node.json --noEmit",
+    "test": "node --import tsx --test \"src/**/*.test.ts\"",
+    "test:e2e": "playwright test -c e2e/playwright.config.ts"
+  }
+}

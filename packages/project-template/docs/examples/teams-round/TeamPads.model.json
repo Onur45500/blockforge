@@ -1,0 +1,27 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "TeamPadRed",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [10, 1, 10],
+        "Position": [-24, 11.5, 24],
+        "Material": "Neon",
+        "Color": [0.9, 0.2, 0.2]
+      }
+    },
+    {
+      "Name": "TeamPadBlue",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [10, 1, 10],
+        "Position": [24, 11.5, 24],
+        "Material": "Neon",
+        "Color": [0.2, 0.4, 0.95]
+      }
+    }
+  ]
+}

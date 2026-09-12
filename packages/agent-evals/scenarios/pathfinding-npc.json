@@ -1,0 +1,17 @@
+{
+  "id": "pathfinding-npc",
+  "prompt": "Add an anchored dummy named ChaseNpc that uses PathfindingService on the server to walk toward the nearest player. Keep it Anchored and PivotTo along waypoints.",
+  "maxTurns": 16,
+  "assertions": {
+    "buildOk": true,
+    "validateWorldOk": true,
+    "validateRefsOk": true,
+    "noQuestionAsked": true,
+    "worldNames": ["ChaseNpc"],
+    "srcRegex": [
+      { "pattern": "ChaseNpc", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "PathfindingService", "pathGlob": "src/server/**/*.ts" },
+      { "pattern": "ComputeAsync|GetWaypoints|PivotTo", "pathGlob": "src/server/**/*.ts" }
+    ]
+  }
+}

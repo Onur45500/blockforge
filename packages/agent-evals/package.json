@@ -1,0 +1,15 @@
+{
+  "name": "@blockforge/agent-evals",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Headless first-try accuracy evals for Blockforge Claude Code game generation",
+  "type": "module",
+  "scripts": {
+    "start": "node ./run.mjs",
+    "evals": "node ./run.mjs",
+    "evals:runtime": "node ./run.mjs --runtime"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

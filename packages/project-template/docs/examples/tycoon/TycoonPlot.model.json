@@ -1,0 +1,27 @@
+{
+  "ClassName": "Model",
+  "Children": [
+    {
+      "Name": "Dropper",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [6, 4, 6],
+        "Position": [32, 13, 12],
+        "Material": "Metal",
+        "Color": [0.4, 0.42, 0.48]
+      }
+    },
+    {
+      "Name": "TycoonCollector",
+      "ClassName": "Part",
+      "Properties": {
+        "Anchored": true,
+        "Size": [8, 1, 8],
+        "Position": [32, 11.5, 22],
+        "Material": "Neon",
+        "Color": [0.2, 0.8, 0.35]
+      }
+    }
+  ]
+}
